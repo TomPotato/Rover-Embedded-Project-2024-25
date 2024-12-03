@@ -6,9 +6,9 @@
 
 <h3 align="center">The finished Product</h3>
 
-<img src="images_redme/Rover.png", align="center">
+<img src="images_redme/Rover.png">
 
-<h3 align="center">Our Tools</h3>
+<h3 align="center">Components</h3>
 
 <br>
 <ul list-style-type: "square">
@@ -21,8 +21,6 @@
     <li>antennae</li>
 </ul>
 <br>
-
-<h3 align="center">The Components</h3>
 
 <h3 align="center">Project Layout</h3>
 

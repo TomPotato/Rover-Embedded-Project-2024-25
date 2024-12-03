@@ -6,9 +6,21 @@
 
 <h3 align="center">The finished Product</h3>
 
-<img src="images_redme/temp1.png">
+<img src="images_redme/Rover.png", align="center">
 
 <h3 align="center">Our Tools</h3>
+
+<br>
+<ul list-style-type: "square">
+    <li>a few (a lot) 3d printable components</li>
+    <li>4 mini servomotors of 4v outtage</li>
+    <li>1 arduino board</li>
+    <li>1 arduino microcontroller</li>
+    <li>few cables</li>
+    <li>geostationary sensor</li>
+    <li>antennae</li>
+</ul>
+<br>
 
 <h3 align="center">The Components</h3>
 

@@ -23,4 +23,16 @@
 <br>
 
 <h3 align="center">Project Layout</h3>
+Rover
+│
+├── rover_exoskeleton               #stl used for the exoskeleton of the rover
+│   └── stl
+│
+├── images_readme
+|   └── images                      # images used in the readme
+│
+├── README.md
+└── LICENSE
 
+<h3 align="center">Contributors</h3>
+<p><i>Agosti Tommaso, Nodari Francesco, Wu Alessio, Wu Davide</i></p>

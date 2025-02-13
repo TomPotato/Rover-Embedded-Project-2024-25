@@ -6,33 +6,56 @@
 
 <h3 align="center">The finished Product</h3>
 
-<img src="images_redme/Rover.png">
+<img src="./images_redme/Rover1.jpg">
+<img src="./images_redme/Rover2.jpg">
 
 <h3 align="center">Components</h3>
 
 <br>
 <ul list-style-type: "square">
     <li>a few (a lot) 3d printable components</li>
-    <li>4 mini servomotors of 4v outtage</li>
-    <li>1 arduino board</li>
-    <li>1 arduino microcontroller</li>
-    <li>few cables</li>
-    <li>geostationary sensor</li>
-    <li>antennae</li>
+    <li>4x mini servomotors of 3v outtage</li>
+    <li>x Jumpers Arduino</li>
+    <li>1x Micro Servo otor SG90</li>
+    <li>1x Arduino compatible Voltometer</li>
+    <li>1x Arduino OSOYOO UNO Board</li>
+    <li>1x Arduino ESP13 Shield for Arduino</li>
+    <li>1x Buzzer compatible with Arduino</li>
+    <li>1x MOdule Driver Motors OSOYOO Model X</li>
+    <li>1x Bluetooth sensor Arduino compatible</li>
+    <li>1x IR sensor Arduino compatible HC-SR04</li>
+    <li>x Various screws and knobs to model the Body of the Rover</li>
+    <li>1x Texas Instruments MSP43P401R</li>
+    <li>1x Texas Instruments BoosterPack</li>
 </ul>
-<br>
+
+<h3 align="center">Software</h3>
+
+<ul>
+    <li>Visual Studio Code</li>
+    <li>Code COmposer Studio</li>
+    <li>Energia IDE</li>
+</ul>
 
 <h3 align="center">Project Layout</h3>
-Rover
-│
-├── rover_exoskeleton               #stl used for the exoskeleton of the rover
-│   └── stl
-│
-├── images_readme
-|   └── images                      # images used in the readme
+<pre>
+<code>
+ROVER
 │
 ├── README.md
-└── LICENSE
+├── LICENSE (MIT defined)
+├── rover_exoscheletons             # stl used for the exoskeleton of the rover
+├── images_readme                   
+│   └──images                       # images used inside the readme
+├── presentation!!                  # presentation of the project
+└── Our Code
+    ├──etc
+    └──etc
+</code>
+</pre>
+
+<h3 align="center">How to Reproduce the Project</h3>
 
 <h3 align="center">Contributors</h3>
+
 <p><i>Agosti Tommaso, Nodari Francesco, Wu Alessio, Wu Davide</i></p>

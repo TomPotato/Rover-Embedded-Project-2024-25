@@ -6,8 +6,8 @@
 
 <h3 align="center">The finished Product</h3>
 
-<img src="./images_redme/Rover1.jpg">
-<img src="./images_redme/Rover2.jpg">
+<img src="./images_readme/Rover1.jpg">
+<img src="./images_readme/Rover2.jpg">
 
 <h3 align="center">Components</h3>
 
@@ -19,7 +19,7 @@
     <li>1x Micro Servo otor SG90</li>
     <li>1x Arduino compatible Voltometer</li>
     <li>1x Arduino OSOYOO UNO Board</li>
-    <li>1x Arduino ESP13 Shield for Arduino</li>
+    <li>1x Arduino ESP8266 Shield for Arduino</li>
     <li>1x Buzzer compatible with Arduino</li>
     <li>1x MOdule Driver Motors OSOYOO Model X</li>
     <li>1x Bluetooth sensor Arduino compatible</li>
@@ -33,7 +33,7 @@
 
 <ul>
     <li>Visual Studio Code</li>
-    <li>Code COmposer Studio</li>
+    <li>Code Composer Studio</li>
     <li>Energia IDE</li>
 </ul>
 
@@ -44,13 +44,15 @@ ROVER
 │
 ├── README.md
 ├── LICENSE (MIT defined)
-├── rover_exoscheletons             # stl used for the exoskeleton of the rover
+├── rover_exoscheleton              # stl used for the exoskeleton of the rover
 ├── images_readme                   
 │   └──images                       # images used inside the readme
+├── images_schematics               
+│  └──images                        # images with the schematics of the Arduino jumpers connections in the Rover
 ├── presentation!!                  # presentation of the project
 └── Our Code
-    ├──etc
-    └──etc
+    ├──ArduinoUNO                   # Arduino side code
+    └──MSP43P401R                   # Texas side code
 </code>
 </pre>
 

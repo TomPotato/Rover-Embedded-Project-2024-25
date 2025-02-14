@@ -37,7 +37,33 @@ if(Serial.available()){
   t = Serial.read();
   Serial.println(t);
 }
- 
+switch (t){
+  case 'F':
+    goForward();
+    break;
+  case 'B':
+    goBack();
+    break;
+  case 'L':
+    goLeft();
+    break;
+  case 'R':
+    goRight();
+    break;
+  case 'S':
+    Stop();
+    break;
+  case 'W':
+    digitalWrite(LED_BUILTIN,HIGH);
+    break;
+  case 'w':
+    digitalWrite(LED_BUILTIN,LOW);
+    break;
+  default:
+    Stop();
+    break;
+}
+/*
 if(t == 'F'){            
   goForward();
 }
@@ -63,6 +89,6 @@ else if(t == 'w'){
  
 else if(t == 'S'){      //STOP (all motors stop)
   Stop();
-}
+}*/
 delay(40);
 }

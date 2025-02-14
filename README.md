@@ -6,8 +6,11 @@
 
 <h3 align="center">The finished Product</h3>
 
-<img src="./images_readme/Rover1.jpg">
-<img src="./images_readme/Rover2.jpg">
+<img src="./images_readme/Rover1.jpg" height="250" align="center">
+<img src="./images_readme/Rover2.jpg" height="250" align="center">
+<br>
+<img src="./images_readme/Rover3.jpg" height="175" align="center">
+<img src="./images_readme/Rover4.jpg" height="175" align="center">
 
 <h3 align="center">Components</h3>
 
@@ -15,7 +18,7 @@
 <ul list-style-type: "square">
     <li>a few (a lot) 3d printable components</li>
     <li>4x mini servomotors of 3v outtage</li>
-    <li>x Jumpers Arduino</li>
+    <li>27x Jumpers Arduino</li>
     <li>1x Micro Servo otor SG90</li>
     <li>1x Arduino compatible Voltometer</li>
     <li>1x Arduino OSOYOO UNO Board</li>

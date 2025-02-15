@@ -1,0 +1,9 @@
+Idee da implementare nel lasso (corto) di tempo Domenica-Lunedí
+
+TOMMASO
+    - giá mezzo implementato, nel movimento del rover si ha una "scan" ambientale con il sensore ad ultrasuoni, viene tutto mappato in un 
+      vettore di struct (x,y) e magari rimandato al controller, sarebbe figo poterlo mappare nello schermo lcd
+    - idea insieme: quando si avvicina troppo ad un "punto critico" esso si ferma e genera un interrupt
+
+COSE DA IMPLEMENTARE ASSOLUTAMENTE:
+    - gestione degli interrupt generati dall'arduino, se rimandarli al controller o cosa fare, interrupt da definire

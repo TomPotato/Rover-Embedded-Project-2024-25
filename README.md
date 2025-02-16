@@ -6,10 +6,17 @@
 
 <h3 align="center">The finished Product</h3>
 
+<p float="left">
 <img src="./images_readme/Rover1.jpg" height="250">
 <img src="./images_readme/Rover2.jpg" height="250">
+</p>
+
+<br>
+
+<p float="left">
 <img src="./images_readme/Rover3.jpg" height="175">
 <img src="./images_readme/Rover4.jpg" height="175">
+</p>
 
 <h3 align="center">Components</h3>
 
@@ -17,15 +24,15 @@
     <li>a few (a lot) 3d printable components</li>
     <li>4x mini servomotors of 3v outtage</li>
     <li>27x Jumpers Arduino</li>
-    <li>1x Micro Servo otor SG90</li>
+    <li>1x Micro Servo motor SG90</li>
     <li>1x Arduino compatible Voltometer</li>
     <li>1x Arduino OSOYOO UNO Board</li>
     <li>1x Arduino ESP8266 Shield for Arduino</li>
     <li>1x Buzzer compatible with Arduino</li>
-    <li>1x MOdule Driver Motors OSOYOO Model X</li>
+    <li>1x Module Driver Motors OSOYOO Model X</li>
     <li>1x Bluetooth sensor Arduino compatible</li>
-    <li>1x IR sensor Arduino compatible HC-SR04</li>
-    <li>x Various screws and knobs to model the Body of the Rover</li>
+    <li>1x Ultrasonic sensor Arduino compatible HC-SR04</li>
+    <li>nx Various screws and knobs to model the Body of the Rover</li>
     <li>1x Texas Instruments MSP43P401R</li>
     <li>1x Texas Instruments BoosterPack</li>
 </ul>
@@ -48,16 +55,16 @@ ROVER
 │
 ├── README.md
 ├── LICENSE (MIT defined)
-├── rover_exoscheleton              # stl used for the exoskeleton of the rover
+├── rover_exoscheleton               # stl used for the exoskeleton of the rover
 ├── images_readme                   
-│   └──images                       # images used inside the readme
+│   └──images                        # images used inside the readme
 ├── images_schematics               
-│  └──images                        # images with the schematics of the Arduino jumpers connections in the Rover
-├── presentation!!                  # presentation of the project
+│  └──images                         # schematics of the Arduino jumpers connections in the Rover
+├── presentation!!                   # presentation of the project
 └── Our Code
     ├── ArduinoUNO                   # Arduino side code
-    │   ├── ComponentsCode                      # Components template code with testing before implementation
-    │   └── RoverFinalSketch                    # Final sketch to be burned into the Rover
+    │   ├── ComponentsCode           # Components template code with testing before implementation
+    │   └── RoverFinalSketch         # Final sketch to be burned into the Rover
     ├── MSP43P401R                   # Texas side code
     └── SideCode                     # Side code to make the BLE module to connect to the pc 
 </code>

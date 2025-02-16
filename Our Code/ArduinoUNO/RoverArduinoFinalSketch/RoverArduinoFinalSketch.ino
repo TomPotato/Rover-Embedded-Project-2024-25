@@ -2,15 +2,16 @@
 #include "Servo.h"                            // Servo motor library
 
 int i=0;
+int temp=0;
 float Travel=0;
 
 int pinTotal = 19;      // defines the total of the pins that are used in the Arduino
 
-#define dir1PinL  2    //Motor direction
-#define dir2PinL  4    //Motor direction
+#define dir1PinL  8    //Motor direction
+#define dir2PinL  7    //Motor direction
 #define speedPinL 6    // Needs to be a PWM pin to be able to control motor speed
-#define dir1PinR  7    //Motor direction
-#define dir2PinR  8   //Motor direction
+#define dir1PinR  4    //Motor direction
+#define dir2PinR  2   //Motor direction
 #define speedPinR 5    // Needs to be a PWM pin to be able to control motor speed
 #define speedMotor 255  // sets the "speed" of the motor, from 0, completeley still, to 255, max outtage
 
@@ -28,7 +29,7 @@ typedef struct{
 
 Obstacle obstacle[150];
 
-SoftwareSerial mySerial(10, 11);        // RX (Read Pin), TX (Tell Pin)
+SoftwareSerial mySerial(0, 1);        // RX (Read Pin), TX (Tell Pin)
 int BluetoothData;                      // the data given from Computer
  
 void setup() 
@@ -48,7 +49,7 @@ void setup()
   
   Serial.begin(9600);
   
-  mySerial.begin(38400);  //serial bluetooth module initializing
+  mySerial.begin(9600);  //serial bluetooth module initializing
   pinMode(LED_BUILTIN,OUTPUT);
 }
 
@@ -61,19 +62,19 @@ void TEST(void){                        // testing function, led on/off
 
 void PINTEST(void){                     // tests if the pins are connected to something or not      
   do{
-    if(digitalRead(pinTotal)=0){
+    if(digitalRead(pinTotal)==0){
       RaiseInterrupt(0);/*              // aggiungere dove i vari pin sono connessi cosí da sapere quali pin non sono connessi, blocca tutto
       switch(pinTotal){
         case
       }*/
     }
     pinTotal--;
-  }while(pinTotal>=0)
+  }while(pinTotal>=0);
 }
 
 void RaiseInterrupt(int num){           // raises an interrupt number in the vector
   if(mySerial.available()){
-    mySerial.write(num);
+    Serial.println(num);
   }
 }
 
@@ -142,11 +143,11 @@ bool IsNear(void){                      // defines if the Rover is near an Obsta
   int j = i;
   do{
     if( Travel > (Obstacle{j}.x - 5) || Travel > (Obstacle{j}.y - 5) ){
-      Near = True;
+      Near = true;
       RaiseInterrupt(1);
     }
     else{
-      Near = False;
+      Near = false;
     }
     j--;
   }while(j!=0);
@@ -160,17 +161,17 @@ void goForward(void){                   // move  forward(all motors rotate in fo
   digitalWrite(dir2PinR,LOW);
   Travel += 0.5;
 }
-void goLeft(void){                      // turn left (right side motors rotate in forward direction, left  side motors rotate in reverse)
-  digitalWrite(dir1PinL, LOW);
-  digitalWrite(dir2PinL,HIGH);
-  digitalWrite(dir1PinR,HIGH);
-  digitalWrite(dir2PinR,LOW);
-}
-void goRight(void){                     // turn right (left side motors rotate in forward direction,  right side motors rotate in reverse)
-  digitalWrite(dir1PinL, HIGH);
+void goLeft(void){                  //turn left (right side motors rotate in forward direction, left  side motors rotate in reverse)
+  digitalWrite(dir1PinL,HIGH);
   digitalWrite(dir2PinL,LOW);
   digitalWrite(dir1PinR,LOW);
   digitalWrite(dir2PinR,HIGH);
+}
+void goRight(void){                 //turn right (left side motors rotate in forward direction,  right side motors rotate in reverse)
+  digitalWrite(dir1PinL,LOW);
+  digitalWrite(dir2PinL,HIGH);
+  digitalWrite(dir1PinR,HIGH);
+  digitalWrite(dir2PinR,LOW);
 }
 void goBack(void){                      // move reverse (all  motors rotate in reverse direction)
   digitalWrite(dir1PinL, LOW);
@@ -198,19 +199,18 @@ void loop()
     servoFRotation;
     servoSRotation;
     servoReturn;
-  }else if(IsNear){
+  }else if(IsNear()){
     servoInit;
     servoFRotation;
     servoSRotation;
     servoReturn;
   }
 
-  if (mySerial.available() && !IsNear)
+  if (mySerial.available() && !IsNear())
   {
 
-    mySerial.write("MotorSpeed =" + String(speedMotor));
+    Serial.println("MotorSpeed =" + String(speedMotor));
     BluetoothData=mySerial.read();
-    Serial.println(BluetoothData);
 
     switch (BluetoothData){
       case 'F':
@@ -237,16 +237,24 @@ void loop()
         TEST();
         Stop();
         break;
-      case 'W':                                         // a quick check to see if there is communication between BTM e Computer
-        digitalWrite(LED_BUILTIN,HIGH);
+      case 'P':
+        digitalWrite(11,HIGH);
+        if(temp==0){
+          Serial.println("ACCESO");
+          temp=1;
+        }
         break;
-      case 'w':                                         // see case 'W':
-        digitalWrite(LED_BUILTIN,LOW);
+      case 'W':
+        digitalWrite(11,LOW);
+        if(temp!=0){
+          Serial.println("SPENTO");
+          temp=0;
+        }
         break;
       default:
         Stop();
         break;
     }
-    delay(20);                               // prepare for next data ...
+    //delay(20);                               // prepare for next data ...
   }
 }

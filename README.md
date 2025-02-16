@@ -1,7 +1,7 @@
 <h1 align="center">The Mars Rover</h1>
 
 <p>With this project we aim to get a better understanding of what skills developing a Mars Rover takes.</p>
-<p><i>"How does a Rover really work?","What defines a Rover?"</i></p>
+<p><i>"How does a Rover really work?","What defines a Rover?","How can we make it connect to an external Module?"</i></p>
 <p>While it would be challenging to build a full Mars Rover in a limited timeframe, understanding how they work and the challenges engineers face can give us a greater appreciation for the level of innovation and precision that goes into their development.</p>
 
 <h3 align="center">The finished Product</h3>
@@ -13,7 +13,6 @@
 
 <h3 align="center">Components</h3>
 
-<br>
 <ul list-style-type: "square">
     <li>a few (a lot) 3d printable components</li>
     <li>4x mini servomotors of 3v outtage</li>
@@ -35,11 +34,14 @@
 
 <ul>
     <li>Visual Studio Code</li>
+    <li>Arduino INO IDE</li>
     <li>Code Composer Studio</li>
     <li>Energia IDE</li>
+    <li>Putty Serial Communication App</li>
 </ul>
 
 <h3 align="center">Project Layout</h3>
+
 <pre>
 <code>
 ROVER
@@ -53,8 +55,11 @@ ROVER
 │  └──images                        # images with the schematics of the Arduino jumpers connections in the Rover
 ├── presentation!!                  # presentation of the project
 └── Our Code
-    ├──ArduinoUNO                   # Arduino side code
-    └──MSP43P401R                   # Texas side code
+    ├── ArduinoUNO                   # Arduino side code
+    │   ├── ComponentsCode                      # Components template code with testing before implementation
+    │   └── RoverFinalSketch                    # Final sketch to be burned into the Rover
+    ├── MSP43P401R                   # Texas side code
+    └── SideCode                     # Side code to make the BLE module to connect to the pc 
 </code>
 </pre>
 

@@ -7,3 +7,5 @@ TOMMASO
 
 COSE DA IMPLEMENTARE ASSOLUTAMENTE:
     - gestione degli interrupt generati dall'arduino, se rimandarli al controller o cosa fare, interrupt da definire
+      - idea sarebbe gestirli tramite un vettore di interrupt, a numero di interrupt (poszione nel vettore) diamo un modo di rispondere 
+      al telecomando

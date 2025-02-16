@@ -4,6 +4,8 @@
 int i=0;
 float Travel=0;
 
+int pinTotal = 19;      // defines the total of the pins that are used in the Arduino
+
 #define dir1PinL  2    //Motor direction
 #define dir2PinL  4    //Motor direction
 #define speedPinL 6    // Needs to be a PWM pin to be able to control motor speed
@@ -55,6 +57,24 @@ void TEST(void){                        // testing function, led on/off
   digitalWrite(LED_BUILTIN,HIGH);
   delay(500);
   digitalWrite(LED_BUILTIN,LOW);
+}
+
+void PINTEST(void){                     // tests if the pins are connected to something or not      
+  do{
+    if(digitalRead(pinTotal)=0){
+      RaiseInterrupt(0);/*              // aggiungere dove i vari pin sono connessi cosí da sapere quali pin non sono connessi, blocca tutto
+      switch(pinTotal){
+        case
+      }*/
+    }
+    pinTotal--;
+  }while(pinTotal>=0)
+}
+
+void RaiseInterrupt(int num){           // raises an interrupt number in the vector
+  if(mySerial.available()){
+    mySerial.write(num);
+  }
 }
 
 void servoInit(void){                   // Initialise the servo Pin and its starting position
@@ -123,6 +143,7 @@ bool IsNear(void){                      // defines if the Rover is near an Obsta
   do{
     if( Travel > (Obstacle{j}.x - 5) || Travel > (Obstacle{j}.y - 5) ){
       Near = True;
+      RaiseInterrupt(1);
     }
     else{
       Near = False;
@@ -172,7 +193,12 @@ void set_Motorspeed(int speed_L,int speed_R){
 void loop() 
 {                                           // put your main code here, to run repeatedly:
 
-  if(Travel != 0 && IsNear){
+  if(Travel = 0){
+    servoInit;
+    servoFRotation;
+    servoSRotation;
+    servoReturn;
+  }else if(IsNear){
     servoInit;
     servoFRotation;
     servoSRotation;

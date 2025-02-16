@@ -6,14 +6,14 @@
 
 <h3 align="center">The finished Product</h3>
 
-<p float="left">
+<p float="left" align="center">
 <img src="./images_readme/Rover1.jpg" height="250">
 <img src="./images_readme/Rover2.jpg" height="250">
 </p>
 
 <br>
 
-<p float="left">
+<p float="left" align="center">
 <img src="./images_readme/Rover3.jpg" height="175">
 <img src="./images_readme/Rover4.jpg" height="175">
 </p>

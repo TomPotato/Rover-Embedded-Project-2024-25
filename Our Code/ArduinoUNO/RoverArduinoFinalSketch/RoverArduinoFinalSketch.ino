@@ -21,7 +21,7 @@ float duration, distance;
 
 Servo servo;              // define the name of the servo motor
 int val;                  // rotation angle
-int pos=92;               // start position of the servo
+int pos=90;               // start position of the servo
 typedef struct{
   int x;
   int y;
@@ -93,13 +93,6 @@ void servoFRotation(void){              // rotates counter clockwise to check le
     digitalWrite(trigPin, LOW);
     duration = pulseIn(echoPin, HIGH);
     distance = (duration / 2) * 0.0343148;
-
-    if(distance <= 30){
-      obstacle[i].x = distance*cos(pos);
-      obstacle[i].y = distance*sin(pos);
-      i++;
-    }
-
     servo.write(pos);
     delay(20);
   }
@@ -124,7 +117,7 @@ void servoSRotation(void){              // rotates clockwise to check left side
     }
 
     servo.write(pos);
-    delay(20);
+    delay(10);
   }
 }
 
@@ -142,9 +135,9 @@ bool IsNear(void){                      // defines if the Rover is near an Obsta
   bool Near;
   int j = i;
   do{
-    if( Travel > (Obstacle{j}.x - 5) || Travel > (Obstacle{j}.y - 5) ){
+    if( Travel == (Obstacle{j}.x - 5) || Travel == (Obstacle{j}.y - 5) ){
       Near = true;
-      RaiseInterrupt(1);
+      //RaiseInterrupt(1);
     }
     else{
       Near = false;
@@ -195,15 +188,15 @@ void loop()
 {                                           // put your main code here, to run repeatedly:
 
   if(Travel = 0){
-    servoInit;
-    servoFRotation;
-    servoSRotation;
-    servoReturn;
+    servoInit();
+    servoFRotation();
+    servoSRotation();
+    servoReturn();
   }else if(IsNear()){
-    servoInit;
-    servoFRotation;
-    servoSRotation;
-    servoReturn;
+    servoInit();
+    servoFRotation();
+    servoSRotation();
+    servoReturn();
   }
 
   if (mySerial.available() && !IsNear())

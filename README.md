@@ -44,8 +44,7 @@
 
 <ul>
     <li>Visual Studio Code</li>
-    <li>Arduino INO IDE</li>
-    <li>Code Composer Studio</li>
+    <li>Arduino IDE</li>
     <li>Energia IDE</li>
     <li>Putty Serial Communication App</li>
     <li>Windows CMD</li>

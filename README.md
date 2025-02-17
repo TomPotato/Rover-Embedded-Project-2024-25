@@ -58,6 +58,13 @@
     <li>Python</li>
 </ul>
 
+<h3 align="center">Library</h3>
+
+<ul>
+    <li>Python library:serial</li>
+    <li>Arduino library: <SoftwareSerial.h> , <Servo.h> </li>
+</ul>
+
 <h3 align="center">Project Layout</h3>
 
 <pre>

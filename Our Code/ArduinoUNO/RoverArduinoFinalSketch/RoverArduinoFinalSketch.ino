@@ -31,7 +31,7 @@ Obstacle obstacle[150];
 
 SoftwareSerial mySerial(0, 1);        // RX (Read Pin), TX (Tell Pin)
 int BluetoothData;                      // the data given from Computer
- 
+
 void setup() 
 {
   pinMode(trigPin, OUTPUT);
@@ -92,17 +92,8 @@ void servoFRotation(void){              // rotates counter clockwise to check le
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
     duration = pulseIn(echoPin, HIGH);   
- distance = duration * 0.0344 / 2;
- Serial.println(distance);
- //&& pos <= 135
- /* if(distance <= 40){
-    Serial.println("OBJECT DETECTED");
-      obstacle[i].x = distance*cos(pos);
-      obstacle[i].y = distance*sin(pos);
-      i++;
-    }else{
-      Serial.println("NO OBJECT DETECTED");
-    }*/
+    distance = duration * 0.0344 / 2;
+    Serial.println(distance);
     servo.write(pos);
     delay(5);
   }
@@ -119,10 +110,10 @@ void servoSRotation(void){              // rotates clockwise to check left side
     digitalWrite(trigPin, LOW);
     duration = pulseIn(echoPin, HIGH);
     distance = duration * 0.0344 / 2;
-     Serial.println(distance);
+    Serial.println(distance);
     
     if(distance <= 40 ){
-       Serial.println("OBJECT DETECTED");
+      Serial.println("OBJECT DETECTED");
       obstacle[i].x = distance*cos(pos);
       obstacle[i].y = distance*sin(pos);
       i++;
@@ -151,8 +142,8 @@ bool IsNear(void){                      // defines if the Rover is near an Obsta
   do{
     if( Travel == (Obstacle{j}.x - 5) || Travel == (Obstacle{j}.y - 5) ){
       Near = true;
-         Serial.println("IS NEAR");
-        RaiseInterrupt(1);  
+      Serial.println("IS NEAR");
+      RaiseInterrupt(1);  
     }
     else{
       Near = false;
@@ -207,18 +198,16 @@ void loop()
     servoFRotation();
     servoSRotation();
     servoReturn();
-  }else{
-    if(IsNear()==false){
-       servoInit();
+  }else if(!IsNear()){
+    servoInit();
     servoFRotation();
     servoSRotation();
     servoReturn();
-    }
-    else{
-      Serial.println("The object is too close fall back");
-    }
-   
   }
+  else{
+      Serial.println("The object is too close fall back");
+  }
+}
 
   if (mySerial.available() && !IsNear())
   {
@@ -244,7 +233,7 @@ void loop()
         break;
       case 'R':
         TEST();
-       goRight();
+        goRight();
         set_Motorspeed(speedMotor,speedMotor);
         break;
       case 'S':

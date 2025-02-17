@@ -35,8 +35,8 @@
     <li>nx Various screws and knobs to model the Body of the Rover</li>
     <li>1x Texas Instruments MSP43P401R</li>
     <li>1x Texas Instruments BoosterPack</li>
-    <li>Breadboard</li>
-    <li>Level logic converter</li>
+    <li>1x Breadboard</li>
+    <li>1x Level logic converter</li>
     <li>1x LED</li>
 </ul>
 

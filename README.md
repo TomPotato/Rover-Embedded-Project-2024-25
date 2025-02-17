@@ -119,5 +119,12 @@ ROVER
 </ul>
 <h3 align="center">Steps</h3>
 <ul>
-   <li></li> 
+    <li>1)upload the msp code</li> 
+    <li>2)check whether the commands are sent correctly using serial monitor</li> 
+    <li>3)close the serial monitor to free the port</li>
+    <li>4)upload arduino code</li>
+    <li>5)supply power to rover</li>
+    <li>enstablish the connection between pc and HC05 using PuTTY</li>
+    <li> run the python script quickly after have closed PuTTY</li>
+    <li>use the two buttons integrated into BoosterPack active and deactive the rovers' led and BoosterPacks' multicolour led</li>
 </ul>

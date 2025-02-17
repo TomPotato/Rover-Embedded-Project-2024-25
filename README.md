@@ -102,17 +102,18 @@ ROVER
     <li></li>
 </ul>
 
-<h3 align="center">Functionalities</h3>
+<h3 align="center">Goals</h3>
 
 <ul>
-    <li>send commands from msp to arduino via bluetooth to control the rover </li>
-    <li>
-        commands: 
-        F(Forward)
-        B(Backward)
-        L(Left)
-        R(Right)
-        P(rovers' led on)
-        W(rovers' led off)        
-    </li>
+    <li>sending commands from msp to arduino via bluetooth to control the rover </li>
+    <li>Commands:</li>
+    <li>F(Forward)</li>
+    <li>B(Backward)</li>
+    <li>L(Left)</li>
+    <li>R(Right)</li>
+    <li>P(rovers' led on)</li>
+    <li>W(rovers' led off)</li>
+    <li>sending rovers' led status and information of distance from arduino to msp432</li>
+    <li>The multicolor LED integrated into the BoosterPack operates in accordance with control commands (e.g., LED ON/OFF) transmitted by the Arduino             
+    microcontroller.</li>
 </ul>

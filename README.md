@@ -25,12 +25,12 @@
     <li>4x mini servomotors of 3v outtage</li>
     <li>27x Jumpers Arduino</li>
     <li>1x Micro Servo motor SG90</li>
-    <li>1x Arduino compatible Voltometer</li>
+    <li>1x Arduino compatible Voltmeter</li>
     <li>1x Arduino OSOYOO UNO Board</li>
     <li>1x Arduino ESP8266 Shield for Arduino</li>
     <li>1x Buzzer compatible with Arduino</li>
     <li>1x Module Driver Motors OSOYOO Model X</li>
-    <li>1x Bluetooth sensor Arduino compatible</li>
+    <li>1x Bluetooth sensor Arduino compatible HC05</li>
     <li>1x Ultrasonic sensor Arduino compatible HC-SR04</li>
     <li>nx Various screws and knobs to model the Body of the Rover</li>
     <li>1x Texas Instruments MSP43P401R</li>

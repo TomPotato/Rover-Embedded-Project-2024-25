@@ -33,22 +33,22 @@
     <li>1x Bluetooth sensor Arduino compatible HC05</li>
     <li>1x Ultrasonic sensor Arduino compatible HC-SR04</li>
     <li>nx Various screws and knobs to model the Body of the Rover</li>
-    <li>1x Texas Instruments MSP43P401R</li>
-    <li>1x Texas Instruments BoosterPack</li>
+    <li>1x Texas Instruments MSP432P401R</li>
+    <li>1x Texas Instruments BoosterPack MKII</li>
     <li>1x Breadboard</li>
     <li>1x Logic level converter</li>
     <li>1x LED</li>
+    <li>PC/LAPTOP</li>
 </ul>
 
 <h3 align="center">Software</h3>
 
 <ul>
     <li>Visual Studio Code</li>
-    <li>Arduino INO IDE</li>
-    <li>Code Composer Studio</li>
+    <li>Arduino IDE</li>
     <li>Energia IDE</li>
     <li>Putty Serial Communication App</li>
-    <li>Windows CMD</li>
+    <li>Windows CMD/Powershell</li>
 </ul>
 
 <h3 align="center">Programming Language</h3>
@@ -56,6 +56,13 @@
 <ul>
     <li>C/C++</li>
     <li>Python</li>
+</ul>
+
+<h3 align="center">Library</h3>
+
+<ul>
+    <li>Python library:serial</li>
+    <li>Arduino library: SoftwareSerial.h , Servo.h</li>
 </ul>
 
 <h3 align="center">Project Layout</h3>
@@ -93,4 +100,24 @@ ROVER
     <li>RX e TX non sono posizionati correttamente, scambiali!!!</li>
     <li>hc-05 non funziona coi 5V</li>
     <li></li>
+</ul>
+
+<h3 align="center">Goals</h3>
+
+<ul>
+    <li>sending commands from msp to arduino via bluetooth to control the rover </li>
+    <li>Commands:</li>
+    <li>F(Forward)</li>
+    <li>B(Backward)</li>
+    <li>L(Left)</li>
+    <li>R(Right)</li>
+    <li>P(rovers' led on)</li>
+    <li>W(rovers' led off)</li>
+    <li>sending rovers' led status and information of distance from arduino to msp432</li>
+    <li>The multicolor LED integrated into the BoosterPack operates in accordance with control commands (e.g., LED ON/OFF) transmitted by the Arduino             
+    microcontroller.</li>
+</ul>
+<h3 align="center">Steps</h3>
+<ul>
+   <li></li> 
 </ul>

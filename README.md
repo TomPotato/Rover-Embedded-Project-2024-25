@@ -96,7 +96,7 @@ ROVER WALL-E
 <h3 align="center">Goals</h3>
 
 <ul>
-    <li>Sending commands from msp to arduino via bluetooth to control the rover </li>
+    <li>Sending commands from MSP432(with BoosterPack) to arduino via bluetooth to control the rover </li>
     <li>Commands:</li>
     <ul>
         <li>F(Forward)</li>
@@ -107,7 +107,7 @@ ROVER WALL-E
         <li>W(rovers' led off)</li>      
     </ul>
     <li>Sending rovers' led status and ultrasonic data from arduino to my pc</li>
-    <li>The multicolor LED integrated into the BoosterPack operates in accordance with control commands (e.g., LED ON/OFF) transmitted by the Arduino</li>
+    <li>The multicolor LED integrated into the BoosterPack operates in accordance with control commands (e.g., LED ON/OFF) transmitted by the Arduino.</li>
 </ul>
 
 <h3 align="center">Steps</h3>
@@ -118,6 +118,7 @@ ROVER WALL-E
     <li>Power the rover</li>
     <li>Enstablish the connection between pc and HC05 using PuTTY</li>
     <li>Run the python script quickly after have closed PuTTY</li>
+    <li>Use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED will change.</li>
     <li>Use the joystick to control the rovers' movement, and use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED will change.</li>
 </ol>
 <h3 align="center">Contributors</h3>

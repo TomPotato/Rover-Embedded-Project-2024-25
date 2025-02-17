@@ -60,13 +60,72 @@ void TEST(void){                        // testing function, led on/off
   digitalWrite(LED_BUILTIN,LOW);
 }
 
-void PINTEST(void){                     // tests if the pins are connected to something or not      
+bool PINTEST(void){                     // tests if the pins are connected to something or not      
   do{
     if(digitalRead(pinTotal)==0){
-      RaiseInterrupt(0);/*              // aggiungere dove i vari pin sono connessi cosí da sapere quali pin non sono connessi, blocca tutto
+      RaiseInterrupt(0);                // aggiungere dove i vari pin sono connessi cosí da sapere quali pin non sono connessi, blocca tutto
       switch(pinTotal){
-        case
-      }*/
+        case 0:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin Rx detached");
+          return false;
+          break;
+        case 1:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin Tx detached");
+          return false;
+          break;
+        case 2:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin RMotorB detached");
+          return false;
+          break;
+        case 4:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin RMotorF detached");
+          return false;
+          break;
+        case 5:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin SpeedRMotor detached");
+          return false;
+          break;
+        case 6:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin SpeedLMotor detached");
+          return false;
+          break;
+        case 7:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin LMotorF detached");
+          return false;
+          break;
+        case 8:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin LMotorB detached");
+          return false;
+          break;
+        case 9:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin ServoMotor detached");
+          return false;
+          break;
+        case 11:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin LED detached");
+          return false;
+          break;
+        case 12:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin TRIG detached");
+          return false;
+          break;
+        case 13:
+          RaiseInterrupt(2);
+          Serial.println("Error Pin ECHO detached");
+          return false;
+          break;
+      }
     }
     pinTotal--;
   }while(pinTotal>=0);
@@ -192,6 +251,7 @@ void set_Motorspeed(int speed_L,int speed_R){
 
 void loop() 
 {                                           // put your main code here, to run repeatedly:
+  if(!PINTEST()){
 
   if(Travel == 0){
     servoInit();
@@ -207,7 +267,6 @@ void loop()
   else{
       Serial.println("The object is too close fall back");
   }
-}
 
   if (mySerial.available() && !IsNear())
   {
@@ -260,4 +319,5 @@ void loop()
     }
     //delay(20);                               // prepare for next data ...
   }
+}
 }

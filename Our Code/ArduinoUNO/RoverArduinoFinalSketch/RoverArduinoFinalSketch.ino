@@ -13,10 +13,10 @@ int pinTotal = 19;      // defines the total of the pins that are used in the Ar
 #define dir1PinR  4    //Motor direction
 #define dir2PinR  2   //Motor direction
 #define speedPinR 5    // Needs to be a PWM pin to be able to control motor speed
-#define speedMotor 255  // sets the "speed" of the motor, from 0, completeley still, to 255, max outtage
+#define speedMotor 200  // sets the "speed" of the motor, from 0, completeley still, to 255, max outtage
 
-#define echoPin 12
-#define trigPin 13
+#define echoPin 13
+#define trigPin 12
 float duration, distance;
 
 Servo servo;              // define the name of the servo motor 

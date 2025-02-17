@@ -3,7 +3,7 @@
 
 int i=0;
 int temp=0;
-float Travel=0;
+float Travel=0.5;
 
 int pinTotal = 19;      // defines the total of the pins that are used in the Arduino
 
@@ -19,7 +19,7 @@ int pinTotal = 19;      // defines the total of the pins that are used in the Ar
 #define trigPin 13
 float duration, distance;
 
-Servo servo;              // define the name of the servo motor
+Servo servo;              // define the name of the servo motor 
 int val;                  // rotation angle
 int pos=90;               // start position of the servo
 typedef struct{
@@ -84,23 +84,33 @@ void servoInit(void){                   // Initialise the servo Pin and its star
 }
 
 void servoFRotation(void){              // rotates counter clockwise to check left side
-  for (pos; pos <= 170; pos += 1) {         // rotate counterclockwise to check
+  for (pos; pos <= 135; pos += 1) {         // rotate counterclockwise to check
     
     digitalWrite(trigPin, LOW); 
     delayMicroseconds(2);
     digitalWrite(trigPin, HIGH);
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
-    duration = pulseIn(echoPin, HIGH);
-    distance = (duration / 2) * 0.0343148;
+    duration = pulseIn(echoPin, HIGH);   
+ distance = duration * 0.0344 / 2;
+ Serial.println(distance);
+ //&& pos <= 135
+ /* if(distance <= 40){
+    Serial.println("OBJECT DETECTED");
+      obstacle[i].x = distance*cos(pos);
+      obstacle[i].y = distance*sin(pos);
+      i++;
+    }else{
+      Serial.println("NO OBJECT DETECTED");
+    }*/
     servo.write(pos);
-    delay(20);
+    delay(5);
   }
 }
 
 void servoSRotation(void){              // rotates clockwise to check left side
   
-  for (pos; pos >= 20; pos -= 1) {
+  for (pos; pos >= 40; pos -= 1) {
 
     digitalWrite(trigPin, LOW); 
     delayMicroseconds(2);
@@ -108,16 +118,20 @@ void servoSRotation(void){              // rotates clockwise to check left side
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
     duration = pulseIn(echoPin, HIGH);
-    distance = (duration / 2) * 0.0343148;
-
-    if(distance <= 30 && pos < 92){
+    distance = duration * 0.0344 / 2;
+     Serial.println(distance);
+    
+    if(distance <= 40 ){
+       Serial.println("OBJECT DETECTED");
       obstacle[i].x = distance*cos(pos);
       obstacle[i].y = distance*sin(pos);
       i++;
+    }else{
+      Serial.println("NO OBJECT DETECTED");
     }
 
     servo.write(pos);
-    delay(10);
+    delay(5);
   }
 }
 
@@ -132,12 +146,13 @@ void servoReturn(void){                 // returns the servo in default position
 }
 
 bool IsNear(void){                      // defines if the Rover is near an Obstacle
-  bool Near;
+  bool Near=false;
   int j = i;
   do{
     if( Travel == (Obstacle{j}.x - 5) || Travel == (Obstacle{j}.y - 5) ){
       Near = true;
-      //RaiseInterrupt(1);
+         Serial.println("IS NEAR");
+        RaiseInterrupt(1);  
     }
     else{
       Near = false;
@@ -192,11 +207,17 @@ void loop()
     servoFRotation();
     servoSRotation();
     servoReturn();
-  }else if(IsNear()){
-    servoInit();
+  }else{
+    if(IsNear()==false){
+       servoInit();
     servoFRotation();
     servoSRotation();
     servoReturn();
+    }
+    else{
+      Serial.println("The object is too close fall back");
+    }
+   
   }
 
   if (mySerial.available() && !IsNear())
@@ -223,7 +244,7 @@ void loop()
         break;
       case 'R':
         TEST();
-        goRight();
+       goRight();
         set_Motorspeed(speedMotor,speedMotor);
         break;
       case 'S':
@@ -233,14 +254,14 @@ void loop()
       case 'P':
         digitalWrite(11,HIGH);
         if(temp==0){
-          Serial.println("ACCESO");
+          Serial.println("LED ON ");
           temp=1;
         }
         break;
       case 'W':
         digitalWrite(11,LOW);
         if(temp!=0){
-          Serial.println("SPENTO");
+          Serial.println("LED OFF");
           temp=0;
         }
         break;

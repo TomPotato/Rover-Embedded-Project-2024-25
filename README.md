@@ -45,6 +45,7 @@
     <li>Code Composer Studio</li>
     <li>Energia IDE</li>
     <li>Putty Serial Communication App</li>
+    <li>CMD</li>
 </ul>
 
 <h3 align="center">Project Layout</h3>

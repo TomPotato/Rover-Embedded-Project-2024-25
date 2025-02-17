@@ -187,7 +187,7 @@ void set_Motorspeed(int speed_L,int speed_R){
 void loop() 
 {                                           // put your main code here, to run repeatedly:
 
-  if(Travel = 0){
+  if(Travel == 0){
     servoInit();
     servoFRotation();
     servoSRotation();

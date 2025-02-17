@@ -48,7 +48,7 @@
     <li>Arduino IDE</li>
     <li>Energia IDE</li>
     <li>Putty Serial Communication App</li>
-    <li>Windows CMD</li>
+    <li>Windows CMD/Powershell</li>
 </ul>
 
 <h3 align="center">Programming Language</h3>

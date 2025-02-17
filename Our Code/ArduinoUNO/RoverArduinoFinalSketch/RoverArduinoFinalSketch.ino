@@ -4,7 +4,7 @@
 int i = 0;
 int temp = 0;
 
-int count = 10;
+int count = 10;           // milliseconds the ROver can stay still before it initialaizes a scan
 
 bool Travel = true;       // check to see if the rover traveled more than 0 cm
 bool Done = true;       // boolean variable to know if the Rover scanned the Environment

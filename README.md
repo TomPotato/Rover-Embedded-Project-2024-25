@@ -7,8 +7,8 @@
 <h3 align="center">The finished Product</h3>
 
 <p float="left" align="center">
-<img src="./images_readme/Rover1.jpg" height="250">
-<img src="./images_readme/Rover2.jpg" height="250">
+<img src="./images_readme/Rover1.jpg" height="175">
+<img src="./images_readme/Rover2.jpg" height="175">
 </p>
 
 <br>
@@ -69,7 +69,7 @@
 
 <pre>
 <code>
-ROVER
+ROVER WALL-E
 │
 ├── README.md
 ├── LICENSE (MIT defined)
@@ -113,11 +113,13 @@ ROVER
 <h3 align="center">Contributors</h3>
 
 <p><i>Agosti Tommaso, Nodari Francesco, Wu Alessio, Wu Davide</i></p>
-
+<br>
+<h6>
 <ul>
     <li>RICORDA</li>
-    <li>voli della sigaretta elettronica: 9</li>
+    <li>voli della sigaretta elettronica: 15</li>
     <li>RX e TX non sono posizionati correttamente, scambiali!!!</li>
-    <li>hc-05 non funziona coi 5V</li>
-    <li></li>
+    <li>hc-05 non funziona coi 5V!!!</li>
+    <li>Pin 0 e 1 non sono da utilizzare, o ti esplode il buffer!!!</li>
 </ul>
+</h6>

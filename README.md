@@ -94,13 +94,15 @@ ROVER WALL-E
 
 <ul>
     <li>sending commands from msp to arduino via bluetooth to control the rover </li>
-    <li>Commands:</li>
-    <li>F(Forward)</li>
-    <li>B(Backward)</li>
-    <li>L(Left)</li>
-    <li>R(Right)</li>
-    <li>P(rovers' led on)</li>
-    <li>W(rovers' led off)</li>
+    <ul>Commands:
+        <li>F(Forward)</li>
+        <li>B(Backward)</li>
+        <li>L(Left)</li>
+        <li>R(Right)</li>
+        <li>P(rovers' led on)</li>
+        <li>W(rovers' led off)</li>      
+    </ul>
+
     <li>sending rovers' led status and information of distance from arduino to msp432</li>
     <li>The multicolor LED integrated into the BoosterPack operates in accordance with control commands (e.g., LED ON/OFF) transmitted by the Arduino             
     microcontroller.</li>

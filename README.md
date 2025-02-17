@@ -38,6 +38,7 @@
     <li>1x Breadboard</li>
     <li>1x Logic level converter</li>
     <li>1x LED</li>
+    <li>PC/LAPTOP</li>
 </ul>
 
 <h3 align="center">Software</h3>

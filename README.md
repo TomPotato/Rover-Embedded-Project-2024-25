@@ -36,7 +36,7 @@
     <li>1x Texas Instruments MSP43P401R</li>
     <li>1x Texas Instruments BoosterPack</li>
     <li>1x Breadboard</li>
-    <li>1x Level logic converter</li>
+    <li>1x Logic level converter</li>
     <li>1x LED</li>
 </ul>
 
@@ -50,7 +50,7 @@
     <li>Putty Serial Communication App</li>
     <li>Windows CMD</li>
 </ul>
-<h3 align="center">Programming Language used</h3>
+<h3 align="center">Programming Language</h3>
 
 <ul>
     <li>C/C++</li>

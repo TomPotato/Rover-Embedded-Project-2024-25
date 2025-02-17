@@ -117,3 +117,7 @@ ROVER
     <li>The multicolor LED integrated into the BoosterPack operates in accordance with control commands (e.g., LED ON/OFF) transmitted by the Arduino             
     microcontroller.</li>
 </ul>
+<h3 align="center">Steps</h3>
+<ul>
+   <li></li> 
+</ul>

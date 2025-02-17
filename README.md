@@ -109,9 +109,10 @@ ROVER WALL-E
     <li>Sending rovers' led status and ultrasonic data from arduino to my pc</li>
     <li>The multicolor LED integrated into the BoosterPack operates in accordance with control commands (e.g., LED ON/OFF) transmitted by the Arduino             
     microcontroller.</li>
-    
 </ul>
+
 <h3 align="center">Steps</h3>
+
 <ol>
     <li>upload the msp code</li> 
     <li>check whether the commands are sent correctly using serial monitor</li> 

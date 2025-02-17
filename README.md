@@ -78,6 +78,9 @@ ROVER WALL-E
 │   └──images                        # images used inside the readme
 ├── images_schematics               
 │  └──images                         # schematics of the Arduino jumpers connections in the Rover
+├── videos      
+│  ├── Rover Wall-E                  # integral video of the Rover
+│  └── snippets                      # parts of the video
 ├── presentation!!                   # presentation of the project
 └── Our Code
     ├── ArduinoUNO                   # Arduino side code

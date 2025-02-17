@@ -33,8 +33,8 @@
     <li>1x Bluetooth sensor Arduino compatible HC05</li>
     <li>1x Ultrasonic sensor Arduino compatible HC-SR04</li>
     <li>nx Various screws and knobs to model the Body of the Rover</li>
-    <li>1x Texas Instruments MSP43P401R</li>
-    <li>1x Texas Instruments BoosterPack</li>
+    <li>1x Texas Instruments MSP432P401R</li>
+    <li>1x Texas Instruments BoosterPack MKII</li>
     <li>1x Breadboard</li>
     <li>1x Logic level converter</li>
     <li>1x LED</li>

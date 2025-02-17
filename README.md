@@ -101,3 +101,18 @@ ROVER
     <li>hc-05 non funziona coi 5V</li>
     <li></li>
 </ul>
+
+<h3 align="center">Functionalities</h3>
+
+<ul>
+    <li>send commands from msp to arduino via bluetooth to control the rover </li>
+    <li>
+        commands: 
+        F(Forward)
+        B(Backward)
+        L(Left)
+        R(Right)
+        P(rovers' led on)
+        W(rovers' led off)        
+    </li>
+</ul>

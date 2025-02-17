@@ -96,7 +96,7 @@ ROVER WALL-E
 <h3 align="center">Goals</h3>
 
 <ul>
-    <li>Sending commands from msp to arduino via bluetooth to control the rover </li>
+    <li>Sending commands from MSP432(with BoosterPack) to arduino via bluetooth to control the rover </li>
     <li>Commands:</li>
     <ul>
         <li>F(Forward)</li>
@@ -107,20 +107,18 @@ ROVER WALL-E
         <li>W(rovers' led off)</li>      
     </ul>
     <li>Sending rovers' led status and ultrasonic data from arduino to my pc</li>
-    <li>The multicolor LED integrated into the BoosterPack operates in accordance with control commands (e.g., LED ON/OFF) transmitted by the Arduino             
-    microcontroller.</li>
+    <li>The multicolor LED integrated into the BoosterPack operates in accordance with control commands (e.g., LED ON/OFF) transmitted by the Arduino.</li>
     
 </ul>
 <h3 align="center">Steps</h3>
 <ol>
-    <li>upload the msp code</li> 
-    <li>check whether the commands are sent correctly using serial monitor</li> 
-    <li>close the serial monitor to free the port</li>
-    <li>upload arduino code</li>
-    <li>supply power to rover</li>
-    <li>enstablish the connection between pc and HC05 using PuTTY</li>
-    <li>run the python script quickly after have closed PuTTY</li>
-    <li>use the two buttons integrated into BoosterPack active and deactive the rovers' led and BoosterPacks' multicolour led</li>
+    <li>Upload the MSP code on MSP432 using Energia IDE </li> 
+    <li>Test whether the commands are sent correctly using serial monitor(Close the serial monitor to free the port after the test)</li> 
+    <li>Upload Arduino code on Arduino Uno using Arduino IDE</li>
+    <li>Power the rover</li>
+    <li>Enstablish the connection between pc and HC05 using PuTTY</li>
+    <li>Run the python script quickly after have closed PuTTY</li>
+    <li>Use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED will change.</li>
 </ol>
 
 <h3 align="center">Contributors</h3>

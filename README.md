@@ -37,6 +37,7 @@
     <li>1x Texas Instruments BoosterPack</li>
     <li>Breadboard</li>
     <li>Level logic converter</li>
+    <li>1x LED</li>
 </ul>
 
 <h3 align="center">Software</h3>

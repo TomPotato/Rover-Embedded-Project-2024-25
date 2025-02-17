@@ -89,7 +89,7 @@ ROVER
 
 <ul>
     <li>RICORDA</li>
-    <li>voli della sigaretta elettronica: 7</li>
+    <li>voli della sigaretta elettronica: 9</li>
     <li>RX e TX non sono posizionati correttamente, scambiali!!!</li>
     <li>hc-05 non funziona coi 5V</li>
     <li></li>

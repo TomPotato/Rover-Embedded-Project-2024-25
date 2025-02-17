@@ -34,10 +34,7 @@ int BluetoothData;                      // the data given from Computer
 
 void setup() 
 {
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-
-  servo.attach(9);
+   servo.attach(9);
   
   pinMode(2,OUTPUT);   //left motors  forward
   pinMode(4,OUTPUT);   //left motors reverse
@@ -48,6 +45,9 @@ void setup()
   pinMode(speedPinR, OUTPUT);
   
   Serial.begin(9600);
+
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
   
   mySerial.begin(9600);  //serial bluetooth module initializing
   pinMode(LED_BUILTIN,OUTPUT);
@@ -63,7 +63,6 @@ void TEST(void){                        // testing function, led on/off
 bool PINTEST(void){                     // tests if the pins are connected to something or not      
   do{
     if(digitalRead(pinTotal)==0){
-      RaiseInterrupt(0);                // aggiungere dove i vari pin sono connessi cosí da sapere quali pin non sono connessi, blocca tutto
       switch(pinTotal){
         case 0:
           RaiseInterrupt(2);
@@ -125,6 +124,10 @@ bool PINTEST(void){                     // tests if the pins are connected to so
           Serial.println("Error Pin ECHO detached");
           return false;
           break;
+        default:
+          RaiseInterrupt(3);
+          Serial.println("No CLUE found");
+          break;
       }
     }
     pinTotal--;
@@ -143,33 +146,66 @@ void servoInit(void){                   // Initialise the servo Pin and its star
 }
 
 void servoFRotation(void){              // rotates counter clockwise to check left side
-  for (pos; pos <= 135; pos += 1) {         // rotate counterclockwise to check
+  for (pos; pos <= 145; pos += 5) {         // rotate counterclockwise to check
     
-    digitalWrite(trigPin, LOW); 
+  digitalWrite(trigPin, LOW); 
+  delayMicroseconds(2);
+ 
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  duration = pulseIn(echoPin, HIGH);
+  distance = (duration / 2) * 0.0343148;
+  
+  if (distance >= 400){
+    Serial.print("Distance>=400cm");
+    delay(500);
+  }
+  else if(distance <= 30){
+    Serial.print("Obstacle Too Near");
+    delay(500);
+  }
+  else {
+    Serial.print("Distance = ");
+    Serial.print(distance);
+    Serial.println(" cm");
+    delay(100);
+  }
+  delay(100);
+
+    /*digitalWrite(trigPin, LOW); 
     delayMicroseconds(2);
+
     digitalWrite(trigPin, HIGH);
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
+    
     duration = pulseIn(echoPin, HIGH);   
-    distance = duration * 0.0344 / 2;
-    Serial.println(distance);
+    distance = (duration/2) * 0.0344;
+    
+    Serial.println(duration);
     servo.write(pos);
-    delay(5);
+    delay(1000);*/
   }
+  delay(100);
 }
 
 void servoSRotation(void){              // rotates clockwise to check left side
   
-  for (pos; pos >= 40; pos -= 1) {
+  for (pos; pos >= 30; pos -= 5) {
 
     digitalWrite(trigPin, LOW); 
     delayMicroseconds(2);
+
     digitalWrite(trigPin, HIGH);
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
+
     duration = pulseIn(echoPin, HIGH);
-    distance = duration * 0.0344 / 2;
-    Serial.println(distance);
+    distance = (duration/2) * 0.0344;
+
+    Serial.println(duration);
     
     if(distance <= 40 ){
       Serial.println("OBJECT DETECTED");
@@ -179,9 +215,8 @@ void servoSRotation(void){              // rotates clockwise to check left side
     }else{
       Serial.println("NO OBJECT DETECTED");
     }
-
     servo.write(pos);
-    delay(5);
+    delay(100);
   }
 }
 
@@ -199,7 +234,7 @@ bool IsNear(void){                      // defines if the Rover is near an Obsta
   bool Near=false;
   int j = i;
   do{
-    if( Travel == (Obstacle{j}.x - 5) || Travel == (Obstacle{j}.y - 5) ){
+    if( Travel == (obstacle[j].x - 5) || Travel == (obstacle[j].y - 5) ){
       Near = true;
       Serial.println("IS NEAR");
       RaiseInterrupt(1);  
@@ -251,8 +286,34 @@ void set_Motorspeed(int speed_L,int speed_R){
 
 void loop() 
 {                                           // put your main code here, to run repeatedly:
-  if(!PINTEST()){
+  //if(PINTEST()){
 
+  digitalWrite(trigPin, LOW); 
+  delayMicroseconds(2);
+ 
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  duration = pulseIn(echoPin, HIGH);
+  distance = (duration / 2) * 0.0343148;
+  
+  if (distance >= 400){
+    Serial.print("Distance>=400cm");
+    delay(500);
+  }
+  else if(distance <= 30){
+    Serial.print("Obstacle Too Near");
+    delay(500);
+  }
+  else {
+    Serial.print("Distance = ");
+    Serial.print(distance);
+    Serial.println(" cm");
+    delay(100);
+  }
+  delay(100);
+/*
   if(Travel == 0){
     servoInit();
     servoFRotation();
@@ -318,6 +379,6 @@ void loop()
         break;
     }
     //delay(20);                               // prepare for next data ...
-  }
-}
+  }*/
+//}
 }

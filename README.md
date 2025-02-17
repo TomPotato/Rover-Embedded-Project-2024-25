@@ -50,6 +50,13 @@
     <li>Putty Serial Communication App</li>
     <li>Windows CMD</li>
 </ul>
+<h3 align="center">Programming Language used</h3>
+
+<ul>
+    <li>C/C++ language</li>
+    <li>Python</li>
+    <li>Arduino.ino</li>
+</ul>
 
 <h3 align="center">Project Layout</h3>
 

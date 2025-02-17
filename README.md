@@ -118,7 +118,7 @@ ROVER WALL-E
     <li>Power the rover</li>
     <li>Enstablish the connection between pc and HC05 using PuTTY</li>
     <li>Run the python script quickly after have closed PuTTY</li>
-    <li>Use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED will change.</li>
+    <li>Use the joystick to control the rovers' movement, and use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED will change.</li>
 </ol>
 <h3 align="center">Contributors</h3>
 

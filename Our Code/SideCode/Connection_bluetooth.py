@@ -11,7 +11,7 @@ try:
 
     print("Mars Rover")
 
-    while True:  # Indented inside the try block
+    while True: 
         # MSP to HC05
         if msp.in_waiting:
             data_from_MSP = msp.readline().decode().strip()  # Read MSP432 data

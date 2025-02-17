@@ -29,7 +29,7 @@ typedef struct{
 
 Obstacle obstacle[150];
 
-SoftwareSerial mySerial(0, 1);        // RX (Read Pin), TX (Tell Pin)
+SoftwareSerial mySerial(10, 3);        // RX (Read Pin), TX (Tell Pin)
 int BluetoothData;                      // the data given from Computer
 
 void setup() 
@@ -147,77 +147,44 @@ void servoInit(void){                   // Initialise the servo Pin and its star
 
 void servoFRotation(void){              // rotates counter clockwise to check left side
   for (pos; pos <= 145; pos += 5) {         // rotate counterclockwise to check
-    
-  digitalWrite(trigPin, LOW); 
-  delayMicroseconds(2);
- 
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-  
-  duration = pulseIn(echoPin, HIGH);
-  distance = (duration / 2) * 0.0343148;
-  
-  if (distance >= 400){
-    Serial.print("Distance>=400cm");
-    delay(500);
-  }
-  else if(distance <= 30){
-    Serial.print("Obstacle Too Near");
-    delay(500);
-  }
-  else {
-    Serial.print("Distance = ");
-    Serial.print(distance);
-    Serial.println(" cm");
+    servo.write(pos);
     delay(100);
   }
-  delay(100);
-
-    /*digitalWrite(trigPin, LOW); 
-    delayMicroseconds(2);
-
-    digitalWrite(trigPin, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(trigPin, LOW);
-    
-    duration = pulseIn(echoPin, HIGH);   
-    distance = (duration/2) * 0.0344;
-    
-    Serial.println(duration);
-    servo.write(pos);
-    delay(1000);*/
-  }
-  delay(100);
 }
 
 void servoSRotation(void){              // rotates clockwise to check left side
   
-  for (pos; pos >= 30; pos -= 5) {
+  for (pos; pos >= 30; pos -= 5) {         
 
-    digitalWrite(trigPin, LOW); 
-    delayMicroseconds(2);
-
-    digitalWrite(trigPin, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(trigPin, LOW);
-
-    duration = pulseIn(echoPin, HIGH);
-    distance = (duration/2) * 0.0344;
-
-    Serial.println(duration);
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  // Set a timeout of 30ms (max distance ~515cm)
+  duration = pulseIn(echoPin, HIGH, 30000);
+  
+  if (duration == 0) {
+    // No echo received within timeout
+    Serial.println("Out of range");
+  } else {
+    distance = (duration / 2) * 0.0343;
     
-    if(distance <= 40 ){
-      Serial.println("OBJECT DETECTED");
-      obstacle[i].x = distance*cos(pos);
-      obstacle[i].y = distance*sin(pos);
-      i++;
-    }else{
-      Serial.println("NO OBJECT DETECTED");
+    if (distance >= 400) {
+      Serial.println("Distance >= 400 cm");
+    } else if (distance <= 2) { // Minimum reliable distance ~2cm
+      Serial.println("Obstacle Too Near");
+    } else {
+      Serial.print("Distance = ");
+      Serial.print(distance);
+      Serial.println(" cm");
     }
+  }
+  delay(100); // Adjust delay between readings as needed
+}
     servo.write(pos);
     delay(100);
-  }
 }
 
 void servoReturn(void){                 // returns the servo in default position (92) and detaches it
@@ -286,34 +253,7 @@ void set_Motorspeed(int speed_L,int speed_R){
 
 void loop() 
 {                                           // put your main code here, to run repeatedly:
-  //if(PINTEST()){
-
-  digitalWrite(trigPin, LOW); 
-  delayMicroseconds(2);
- 
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-  
-  duration = pulseIn(echoPin, HIGH);
-  distance = (duration / 2) * 0.0343148;
-  
-  if (distance >= 400){
-    Serial.print("Distance>=400cm");
-    delay(500);
-  }
-  else if(distance <= 30){
-    Serial.print("Obstacle Too Near");
-    delay(500);
-  }
-  else {
-    Serial.print("Distance = ");
-    Serial.print(distance);
-    Serial.println(" cm");
-    delay(100);
-  }
-  delay(100);
-/*
+  //if(PINTEST()){                                
   if(Travel == 0){
     servoInit();
     servoFRotation();
@@ -379,6 +319,6 @@ void loop()
         break;
     }
     //delay(20);                               // prepare for next data ...
-  }*/
+  }
 //}
 }

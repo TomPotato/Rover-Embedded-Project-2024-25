@@ -18,7 +18,7 @@
 <img src="./images_readme/Rover4.jpg" height="175">
 </p>
 
-<h3 align="center">Components</h3>
+<h2 align="center">Components</h2>
 
 <ul list-style-type: "square">
     <li>a few (a lot) 3d printable components</li>
@@ -88,19 +88,7 @@ ROVER
 </code>
 </pre>
 
-<h3 align="center">How to Reproduce the Project</h3>
-
-<h3 align="center">Contributors</h3>
-
-<p><i>Agosti Tommaso, Nodari Francesco, Wu Alessio, Wu Davide</i></p>
-
-<ul>
-    <li>RICORDA</li>
-    <li>voli della sigaretta elettronica: 9</li>
-    <li>RX e TX non sono posizionati correttamente, scambiali!!!</li>
-    <li>hc-05 non funziona coi 5V</li>
-    <li></li>
-</ul>
+<h2 align="center">How to Reproduce the Project</h2>
 
 <h3 align="center">Goals</h3>
 
@@ -120,4 +108,16 @@ ROVER
 <h3 align="center">Steps</h3>
 <ul>
    <li></li> 
+</ul>
+
+<h3 align="center">Contributors</h3>
+
+<p><i>Agosti Tommaso, Nodari Francesco, Wu Alessio, Wu Davide</i></p>
+
+<ul>
+    <li>RICORDA</li>
+    <li>voli della sigaretta elettronica: 9</li>
+    <li>RX e TX non sono posizionati correttamente, scambiali!!!</li>
+    <li>hc-05 non funziona coi 5V</li>
+    <li></li>
 </ul>

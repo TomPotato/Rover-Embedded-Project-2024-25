@@ -4,10 +4,10 @@
 int i = 0;
 int temp = 0;
 
-int count = 10;           // milliseconds the ROver can stay still before it initialaizes a scan
+int count = 10;           // numbers of command S received 
+                          //it is used to decide how much time the Rover can stay still before it initialaizes a scan
 
 bool Travel = true;       // check to see if the rover traveled more than 0 cm
-bool Done = true;       // boolean variable to know if the Rover scanned the Environment
 
 int pinTotal = 19;      // defines the total of the pins that are used in the Arduino
 
@@ -42,7 +42,7 @@ SoftwareSerial mySerial(10, 11);        // RX (Read Pin), TX (Tell Pin)
 int BluetoothData;                      // the data given from Computer
 
 void setup(){                            // setup code, initialaizes the pins etcetera
-   servo.attach(9);
+  servo.attach(9);     //pin 9 for servo
   
   pinMode(2,OUTPUT);   //left motors  forward
   pinMode(4,OUTPUT);   //left motors reverse
@@ -146,7 +146,7 @@ void RaiseInterrupt(int num){           // raises an interrupt number in the vec
 }
 
 void servoInit(void){                   // Initialise the servo Pin and its starting position
-  servo.attach(9);
+  servo.attach(9);  
   pos = 90;
   servo.write(pos);
 }
@@ -173,8 +173,7 @@ void servoSRotation(void){              // rotates clockwise to identify the obs
   if (duration!=0){
     distance = (duration / 2) * 0.0343;
 
-    if (distance >= 400) {
-    } else if (distance < 25.00){                           // Minimum reliable distance ~2cm
+    if (distance < 25.00){                           // Minimum reliable distance ~2cm
     mySerial.println("degrees " + String(pos) +"------distance " + String(distance));
     }
   }
@@ -260,10 +259,10 @@ void set_Motorspeed(int speed_L,int speed_R){     // sets the motor speed of the
 }
 
 void loop() {                                           // put your main code here, to run repeatedly:
-  //if(PINTEST()){
+  
   if (mySerial.available())
   {
-    if(Travel && count == 10){
+    if(Travel && count == 10){// count indicates how
     mySerial.println("Scan Start");
     servoInit();
     servoFRotation();

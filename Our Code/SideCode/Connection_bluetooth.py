@@ -6,8 +6,8 @@ hc05_port = 'COM14'  # HC-05 Bluetooth Outgoing COM
 
 try:
     # Open Serial connections
-    msp = serial.Serial(msp_port, 115200, timeout=1)
-    hc05 = serial.Serial(hc05_port, 9600, timeout=1)
+    msp = serial.Serial(msp_port, 115200, timeout=1)#same baudrate of the MSP program
+    hc05 = serial.Serial(hc05_port, 9600, timeout=1)#same baudrate of the HC05 and Arduino UNO
 
     print("Mars Rover")
 

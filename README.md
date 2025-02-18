@@ -28,7 +28,7 @@
 
 <h3 align="center">Physical Components Used</h3>
 
-<ul list-style-type: "square">
+<ul>
     <li>a few (a lot) 3d printable components</li>
     <li>4x mini servomotors of 3v outtage</li>
     <li>27x Jumpers Arduino</li>
@@ -41,7 +41,9 @@
     <li>1x Bluetooth sensor Arduino compatible HC-05</li>
     <li>1x Ultrasonic sensor HC-SR04</li>
     <li>nx Various screws and knobs to model the Body of the Rover</li>
-    <li>1x BatteryPack (2x Batteries of 3.6V, 30K mA)</li>
+    <li>1x BatteryPack</li>
+        <li>2x Rechargable Batteries of 3.7V, ~3.000 mA</li>
+        <li>1x Batteries Charge Station</li>
     <li>1x Texas Instruments MSP432P401R</li>
     <li>1x Texas Instruments BoosterPack MKII</li>
     <li>1x Breadboard</li>
@@ -143,7 +145,7 @@ ROVER WALL-E
     <li>RICORDA</li>
     <li>non funziona se non cade una sigaretta elettronica almeno 15 volte</li>
     <li>RX e TX non sono posizionati correttamente, scambiali... oppure no?</li>
-    <li>hc-05 non funziona coi 5V!!! bredboard joins the chat</li>
+    <li>hc-05 non funziona coi 5V!!! breadboard joins the chat</li>
     <li>Pin 0 e 1 non sono da utilizzare o ti esplode il buffer!!! (servono per il debug e il monitor seriale)</li>
 </ul>
 </i>

@@ -20,7 +20,9 @@
 
 <h2 align="center">Link to the Youtube video</h2>
 
+<br>
 <p>Here you'll find the link to the video of the project: <a href = "https://www.youtube.com/watch?v=d_bhMyztT9k">https://www.youtube.com/watch?v=d_bhMyztT9k</a></p>
+<br>
 
 <h2 align="center">Components</h2>
 
@@ -85,10 +87,9 @@ ROVER WALL-E
 │   └──images                        # images used inside the readme
 ├── images_schematics               
 │  └──images                         # schematics of the Arduino jumpers connections in the Rover
-├── videos      
-│  ├── Rover Wall-E                  # integral video of the Rover
-│  └── snippets                      # parts of the video
-├── presentation!!                   # presentation of the project
+├── videos
+│  └── snippets                      # snipepts of the pitch video
+├── Presentation                     # presentation of the project
 └── Our Code
     ├── ArduinoUNO                   # Arduino side code
     │   ├── ComponentsCode           # Components template code with testing before implementation
@@ -140,10 +141,10 @@ ROVER WALL-E
 <i>
 <ul>
     <li>RICORDA</li>
-    <li>non funziona se non cade la sigaretta elettronica almeno 15 volte</li>
+    <li>non funziona se non cade una sigaretta elettronica almeno 15 volte</li>
     <li>RX e TX non sono posizionati correttamente, scambiali... oppure no?</li>
-    <li>hc-05 non funziona coi 5V!!! bredbord joins the chat</li>
-    <li>Pin 0 e 1 non sono da utilizzare, o ti esplode il buffer!!!</li>
+    <li>hc-05 non funziona coi 5V!!! bredboard joins the chat</li>
+    <li>Pin 0 e 1 non sono da utilizzare o ti esplode il buffer!!! (servono per il debug e il monitor seriale)</li>
 </ul>
 </i>
 </h6>

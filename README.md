@@ -91,8 +91,7 @@ ROVER WALL-E
 │   └──images                        # images used inside the readme
 ├── images_schematics               
 │  └──images                         # schematics of the Arduino jumpers connections in the Rover
-├── videos
-│  └── snippets                      # snipepts of the pitch video
+├── videos                           # snippets of the pitch video
 ├── Presentation                     # presentation of the project
 └── Our Code
     ├── ArduinoUNO                   # Arduino side code
@@ -124,7 +123,13 @@ ROVER WALL-E
 
 <h3 align="center">Steps</h3>
 <ol>
-    <i>After you printed the Rover Components and built its exoscheleton</i>
+    <i>After you printed the Rover Components and built its exoscheleton as the image shown below</i>
+    <p>
+    <img src="./images_readme/ComponentsWheels.jpg" height="90">
+    <img src="./images_readme/ComponentsForwardMotors.jpg" height="90">
+    <img src="./images_readme/ComponentsBodySx.jpg" height="90">
+    <img src="./images_readme/ComponentsBodyDx.jpg" height="90">
+    </p>
     <li>Upload the MSP code on MSP432 using <a href="https://energia.nu/">Energia IDE</a></li>
     <img src="./images_readme/EnergiaIDETemplate.png" height="70">
     <li>Test whether the commands are sent correctly using serial monitor (Close the serial monitor to free the port after you finished testing)</li> 
@@ -139,8 +144,9 @@ ROVER WALL-E
             <li>select the COM port that identifies the BT connection on your pc</li>
             <i>You can use the sessions Default Settings as the code does not save specifics</i>
         </ol>
-    <li>Run the python script quickly after closing PuTTY </li>
-    <i>The Rover at this point should have commenced the "Ambiental Scan", sent the Scan start/end message and the eventual obstacles position</i>
+    <li>Run the python script on your pc using CMD quickly after closing PuTTY </li>
+    <li>The Rover will commence any action only after he is connected to the "Master" controller and has commence in receiving data</li>
+    <i>If everything went well, the rover should have started the "Ambiental Scan" by sending the Scan start/end message and the eventual obstacles position</i>
     <img src="./images_readme/DataScanOutput.png" height="175">
     <li>Use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED to test the communication. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED should turn on/off respectively.</li>
     <li>Use the joystick to control the rovers' movement, and the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED.</li>

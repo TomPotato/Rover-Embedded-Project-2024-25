@@ -138,7 +138,7 @@ ROVER WALL-E
     <p><img src="./images_readme/ArduinoIDETemplate.png" height="80"></p>
     <li>Power up the rover</li>
     <li>Enstablish the connection between pc and HC05 using <a href="https://www.putty.org/">PuTTY</a></li>
-    <img src="./images_readme/PuTTYPortConfig.png" height="185">
+    <p><img src="./images_readme/PuTTYPortConfig.png" height="185"></p>
         <ol>
             <li>select the connection type as serial</li>
             <li>select the COM port that identifies the BT connection on your pc</li>
@@ -147,7 +147,7 @@ ROVER WALL-E
     <li>Run the python script on your pc using CMD quickly after closing PuTTY </li>
     <li>The Rover will commence any action only after he is connected to the "Master" controller and has commence in receiving data</li>
     <i>If everything went well, the rover should have started the "Ambiental Scan" by sending the Scan start/end message and the eventual obstacles position</i>
-    <img src="./images_readme/DataScanOutput.png" height="175">
+    <p><img src="./images_readme/DataScanOutput.png" height="175"></p>
     <li>Use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED to test the communication. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED should turn on/off respectively.</li>
     <li>Use the joystick to control the rovers' movement, and the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED.</li>
     <li>If you want to Re-Scan the environment, the Rover has to stay still for ~5 seconds (receive 10 S signals)</li>

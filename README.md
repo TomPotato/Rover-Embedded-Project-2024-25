@@ -125,11 +125,12 @@ ROVER WALL-E
 <h3 align="center">Steps</h3>
 <ol>
     <i>After you printed the Rover Components and built its exoscheleton</i>
-    <li>Upload the MSP code on MSP432 using <a href="https://energia.nu/">Energia IDE</a> (check that the baudrate of the MSP and the BT Port are the same)</li>
+    <li>Upload the MSP code on MSP432 using <a href="https://energia.nu/">Energia IDE</a></li>
     <li>Test whether the commands are sent correctly using serial monitor (Close the serial monitor to free the port after you finished testing)</li> 
-    <li>Upload "RoverArduinoFinalSketch.ino" on Arduino Uno using Arduino IDE (again, check that the baudrate of the board and BT Module are compatible)</li>
+    <li>Upload "RoverArduinoFinalSketch.ino" on Arduino Uno using <a href="https://www.arduino.cc/en/software">Arduino IDE</a> (again, check that the baudrate of the Arduino board and BT Module are compatible)</li>
     <li>Power up the rover</li>
-    <li>Enstablish the connection between pc and HC05 using <a href="https://www.putty.org/">PuTTY</a></li>
+    <li>Enstablish the connection between pc and HC05 using <a href="https://www.putty.org/">PuTTY</a>(select the connection type as serial)</li>
+    (https://github.com/user-attachments/assets/5ce4343d-da83-4aea-bfbc-360b8f429b11)
     <li>Run the python script quickly after closing PuTTY </li>
     <i>The Rover at this point should have commenced the "Ambiental Scan", sent the Scan start/end message and the obstacles position</i>
     <li>Use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED to test the communication. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED should turn on/off respectively.</li>

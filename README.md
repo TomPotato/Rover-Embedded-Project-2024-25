@@ -42,8 +42,10 @@
     <li>1x Ultrasonic sensor HC-SR04</li>
     <li>nx Various screws and knobs to model the Body of the Rover</li>
     <li>1x BatteryPack</li>
+        <ul>
         <li>2x Rechargable Batteries of 3.7V, ~3.000 mA</li>
         <li>1x Batteries Charge Station</li>
+        </ul>
     <li>1x Texas Instruments MSP432P401R</li>
     <li>1x Texas Instruments BoosterPack MKII</li>
     <li>1x Breadboard</li>

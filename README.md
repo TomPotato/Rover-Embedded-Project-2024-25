@@ -1,8 +1,8 @@
 <h1 align="center">The Mars Rover: WALL-E</h1>
 
 <p>With this project we aim to get a better understanding of what skills developing a Mars Rover takes.</p>
-<p><i>"How does a Rover really work?","What defines a Rover?","How can we make it connect to an external Module?"</i></p>
-<p>While it would be challenging to build a full Mars Rover in a limited timeframe, understanding how they work and the challenges engineers face can give us a greater appreciation for the level of innovation and precision that goes into their development.</p>
+<p><i>"How does a Rover really work?","What actions or characteristics define a machine as a Rover?","How can we transmit and receive data from the Rover?"</i></p>
+<p>While it would be challenging to build a full functioning Mars Rover in a limited timeframe, understanding how they work and the challenges engineers face, can give us a greater appreciation for the level of innovation and precision that goes into their development.</p>
 
 <h3 align="center">The finished Product</h3>
 
@@ -18,7 +18,12 @@
 <img src="./images_readme/Rover4.jpg" height="175">
 </p>
 
+<h2 align="center">Link to the Youtube video</h2>
+Here you'll find the link to the video of the project: https://www.youtube.com/watch?v=d_bhMyztT9k 
+
 <h2 align="center">Components</h2>
+
+<h3 align="center">Physical Components Used</h3>
 
 <ul list-style-type: "square">
     <li>a few (a lot) 3d printable components</li>
@@ -30,18 +35,19 @@
     <li>1x Arduino ESP8266 Shield for Arduino</li>
     <li>1x Buzzer compatible with Arduino</li>
     <li>1x Module Driver Motors OSOYOO Model X</li>
-    <li>1x Bluetooth sensor Arduino compatible HC05</li>
-    <li>1x Ultrasonic sensor Arduino compatible HC-SR04</li>
+    <li>1x Bluetooth sensor Arduino compatible HC-05</li>
+    <li>1x Ultrasonic sensor HC-SR04</li>
     <li>nx Various screws and knobs to model the Body of the Rover</li>
+    <li>1x BatteryPack (2x Batteries of 3.6V, 30K mA)</li>
     <li>1x Texas Instruments MSP432P401R</li>
     <li>1x Texas Instruments BoosterPack MKII</li>
     <li>1x Breadboard</li>
     <li>1x Logic level converter</li>
     <li>1x LED</li>
-    <li>PC/LAPTOP</li>
+    <li>1x PC/LAPTOP</li>
 </ul>
 
-<h3 align="center">Software</h3>
+<h3 align="center">Software Used</h3>
 
 <ul>
     <li>Visual Studio Code</li>
@@ -51,21 +57,21 @@
     <li>Windows CMD/Powershell</li>
 </ul>
 
-<h3 align="center">Programming Language</h3>
+<h3 align="center">Programming Languages used</h3>
 
 <ul>
     <li>C/C++</li>
     <li>Python</li>
 </ul>
 
-<h3 align="center">Library</h3>
+<h3 align="center">Libraries used</h3>
 
 <ul>
     <li>Python library:serial</li>
     <li>Arduino library: SoftwareSerial.h , Servo.h</li>
 </ul>
 
-<h3 align="center">Project Layout</h3>
+<h2 align="center">Project Layout</h2>
 
 <pre>
 <code>
@@ -96,8 +102,8 @@ ROVER WALL-E
 <h3 align="center">Goals</h3>
 
 <ul>
-    <li>Sending commands from MSP432(with BoosterPack) to arduino via bluetooth to control the rover </li>
-    <li>Commands:</li>
+    <li>Sending commands from MSP432 (with attached a BoosterPack) to arduino via bluetooth to control the rover </li>
+    <li>Commands that can eb Issued:</li>
     <ul>
         <li>F(Forward)</li>
         <li>B(Backward)</li>
@@ -106,26 +112,31 @@ ROVER WALL-E
         <li>P(rovers' led on)</li>
         <li>W(rovers' led off)</li>      
     </ul>
-    <li>Sending rovers' led status and ultrasonic data from arduino to my pc</li>
+    <li>Sending rovers' led status and ultrasonic data from arduino to the pc/laptop</li>
     <li>The multicolor LED integrated into the BoosterPack operates in accordance with control commands (e.g., LED ON/OFF) transmitted by the Arduino.</li>
 </ul>
 
 <h3 align="center">Steps</h3>
 <ol>
-    <li>Upload the MSP code on MSP432 using Energia IDE </li> 
-    <li>Test whether the commands are sent correctly using serial monitor(Close the serial monitor to free the port after the test)</li> 
-    <li>Upload Arduino code on Arduino Uno using Arduino IDE</li>
-    <li>Power the rover</li>
+    <li>Upload the MSP code on MSP432 using Energia IDE (check that the baudrate of the MSP and the BT Port are the same)</li>
+    <li>Test whether the commands are sent correctly using serial monitor (Close the serial monitor to free the port after you finished testing)</li> 
+    <li>Upload "RoverArduinoFinalSketch.ino" on Arduino Uno using Arduino IDE (again, check that the baudrate of the board and BT Module are compatible)</li>
+    <li>Power up the rover</li>
     <li>Enstablish the connection between pc and HC05 using PuTTY</li>
-    <li>Run the python script quickly after have closed PuTTY</li>
-    <li>Use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED will change.</li>
-    <li>Use the joystick to control the rovers' movement, and use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED will change.</li>
+    <li>Run the python script quickly after closing PuTTY </li>
+    <i>The Rover at this point should have commenced the "Ambiental Scan"</i>
+    <li>Use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED to test the communication. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED should turn on/off respectively.</li>
+    <li>Use the joystick to control the rovers' movement, and use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED.</li>
+    <i>Remember, if you want to Re-Scan the environment, the Rover has to stay still for ~5 seconds (receive 10 S signals)</i>
 </ol>
+
 <h3 align="center">Contributors</h3>
 
 <p><i>Agosti Tommaso, Nodari Francesco, Wu Alessio, Wu Davide</i></p>
 <br>
+
 <h6>
+<i>
 <ul>
     <li>RICORDA</li>
     <li>non funziona se non cade la sigaretta elettronica almeno 15 volte</li>
@@ -133,4 +144,5 @@ ROVER WALL-E
     <li>hc-05 non funziona coi 5V!!! bredbord joins the chat</li>
     <li>Pin 0 e 1 non sono da utilizzare, o ti esplode il buffer!!!</li>
 </ul>
+</i>
 </h6>

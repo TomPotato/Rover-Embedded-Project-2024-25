@@ -126,20 +126,21 @@ ROVER WALL-E
 <ol>
     <i>After you printed the Rover Components and built its exoscheleton</i>
     <li>Upload the MSP code on MSP432 using <a href="https://energia.nu/">Energia IDE</a></li>
-    <img src="./images_readme/EnergiaIDETemplate.png" height="100">
+    <img src="./images_readme/EnergiaIDETemplate.png" height="70">
     <li>Test whether the commands are sent correctly using serial monitor (Close the serial monitor to free the port after you finished testing)</li> 
-    <li>Upload "RoverArduinoFinalSketch.ino" on Arduino Uno using <a href="https://www.arduino.cc/en/software">Arduino IDE</a> (again, check that the baudrate of the Arduino board and BT Module are compatible)</li>
-    <img src="./images_readme/ArduinoIDETemplate.png" height="100">
+    <li>Upload "RoverArduinoFinalSketch.ino" on Arduino Uno using <a href="https://www.arduino.cc/en/software">Arduino IDE</a></li> 
+    <i>(check that the baudrate of the Arduino board and BT Module are compatible)</i>
+    <p><img src="./images_readme/ArduinoIDETemplate.png" height="80"></p>
     <li>Power up the rover</li>
     <li>Enstablish the connection between pc and HC05 using <a href="https://www.putty.org/">PuTTY</a></li>
     <img src="./images_readme/PuTTYPortConfig.png" height="185">
         <ol>
             <li>select the connection type as serial</li>
             <li>select the COM port that identifies the BT connection on your pc</li>
-            <i>You can use the Default Settings as the code does not save sessions specifics</i>
+            <i>You can use the sessions Default Settings as the code does not save specifics</i>
         </ol>
     <li>Run the python script quickly after closing PuTTY </li>
-    <i>The Rover at this point should have commenced the "Ambiental Scan", sent the Scan start/end message and the obstacles position</i>
+    <i>The Rover at this point should have commenced the "Ambiental Scan", sent the Scan start/end message and the eventual obstacles position</i>
     <img src="./images_readme/DataScanOutput.png" height="175">
     <li>Use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED to test the communication. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED should turn on/off respectively.</li>
     <li>Use the joystick to control the rovers' movement, and the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED.</li>

@@ -128,7 +128,7 @@ ROVER WALL-E
     <li>Test whether the commands are sent correctly using serial monitor (Close the serial monitor to free the port after you finished testing)</li> 
     <li>Upload "RoverArduinoFinalSketch.ino" on Arduino Uno using Arduino IDE (again, check that the baudrate of the board and BT Module are compatible)</li>
     <li>Power up the rover</li>
-    <li>Enstablish the connection between pc and HC05 using PuTTY</li>
+    <li>Enstablish the connection between pc and HC05 using <a href="https://www.putty.org/">PuTTY</a></li>
     <li>Run the python script quickly after closing PuTTY </li>
     <i>The Rover at this point should have commenced the "Ambiental Scan"</i>
     <li>Use the two buttons integrated into the BoosterPack to activate and deactivate the rover's LED to test the communication. Once the LED ON/OFF message is received from the Arduino, the BoosterPack's multicolor LED should turn on/off respectively.</li>

@@ -127,7 +127,7 @@ ROVER WALL-E
     <i>After you printed the Rover Components and built its exoscheleton</i>
     <li>Upload the MSP code on MSP432 using <a href="https://energia.nu/">Energia IDE</a> (check that the baudrate of the MSP and the BT Port are the same)</li>
     <li>Test whether the commands are sent correctly using serial monitor (Close the serial monitor to free the port after you finished testing)</li> 
-    <li>Upload "RoverArduinoFinalSketch.ino" on Arduino Uno using <a href="https://www.arduino.cc/en/software">Arduino IDE</a> (again, check that the baudrate of the board and BT Module are compatible)</li>
+    <li>Upload "RoverArduinoFinalSketch.ino" on Arduino Uno using Arduino IDE (again, check that the baudrate of the board and BT Module are compatible)</li>
     <li>Power up the rover</li>
     <li>Enstablish the connection between pc and HC05 using <a href="https://www.putty.org/">PuTTY</a></li>
     <li>Run the python script quickly after closing PuTTY </li>

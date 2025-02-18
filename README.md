@@ -1,4 +1,4 @@
-<h1 align="center">The Mars Rover</h1>
+<h1 align="center">The Mars Rover: WALL-E</h1>
 
 <p>With this project we aim to get a better understanding of what skills developing a Mars Rover takes.</p>
 <p><i>"How does a Rover really work?","What defines a Rover?","How can we make it connect to an external Module?"</i></p>
@@ -128,9 +128,9 @@ ROVER WALL-E
 <h6>
 <ul>
     <li>RICORDA</li>
-    <li>voli della sigaretta elettronica: 15</li>
-    <li>RX e TX non sono posizionati correttamente, scambiali!!!</li>
-    <li>hc-05 non funziona coi 5V!!!</li>
+    <li>non funziona se non cade la sigaretta elettronica almeno 15 volte</li>
+    <li>RX e TX non sono posizionati correttamente, scambiali... oppure no?</li>
+    <li>hc-05 non funziona coi 5V!!! bredbord joins the chat</li>
     <li>Pin 0 e 1 non sono da utilizzare, o ti esplode il buffer!!!</li>
 </ul>
 </h6>

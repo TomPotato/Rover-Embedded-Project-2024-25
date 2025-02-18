@@ -17,6 +17,8 @@
 <img src="./images_readme/Rover3.jpg" height="175">
 <img src="./images_readme/Rover4.jpg" height="175">
 </p>
+<h2 align="center">Link to the Youtube video</h2>
+Here you'll find the link to the [Youtube] (https://www.youtube.com/watch?v=d_bhMyztT9k) video
 
 <h2 align="center">Components</h2>
 

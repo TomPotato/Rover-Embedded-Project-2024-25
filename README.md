@@ -124,7 +124,7 @@ ROVER WALL-E
 
 <h3 align="center">Steps</h3>
 <ol>
-    <li>Upload the MSP code on MSP432 using Energia IDE (check that the baudrate of the MSP and the BT Port are the same)</li>
+    <li>Upload the MSP code on MSP432 using <a href="https://energia.nu/">Energia IDE</a> (check that the baudrate of the MSP and the BT Port are the same)</li>
     <li>Test whether the commands are sent correctly using serial monitor (Close the serial monitor to free the port after you finished testing)</li> 
     <li>Upload "RoverArduinoFinalSketch.ino" on Arduino Uno using Arduino IDE (again, check that the baudrate of the board and BT Module are compatible)</li>
     <li>Power up the rover</li>

@@ -108,7 +108,7 @@ ROVER WALL-E
 
 <ul>
     <li>Sending commands from MSP432 (with attached a BoosterPack) to arduino via bluetooth to control the rover </li>
-    <li>Commands that can eb Issued:</li>
+    <li>Commands that can be Issued:</li>
     <ul>
         <li>F(Forward)</li>
         <li>B(Backward)</li>

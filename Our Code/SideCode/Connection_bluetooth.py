@@ -3,6 +3,7 @@ import serial
 # COM ports (Check Device Manager)
 msp_port = 'COM9'    # MSP432 Serial
 hc05_port = 'COM14'  # HC-05 Bluetooth Outgoing COM
+print("opening");
 
 try:
     # Open Serial connections

@@ -11,11 +11,11 @@ bool Travel = true;       // check to see if the rover traveled more than 0 cm
 
 int pinTotal = 19;      // defines the total of the pins that are used in the Arduino
 
-#define dir1PinL  8    //Motor direction Forward left side motors
-#define dir2PinL  7    //Motor direction Backwards left side motors
+#define dir1PinL  7    //Motor direction Forward left side motors
+#define dir2PinL  8    //Motor direction Backwards left side motors
 #define speedPinL 6    // Needs to be a PWM pin to be able to control motor speed
-#define dir1PinR  4    //Motor direction Forward right side motors
-#define dir2PinR  2   //Motor direction Backwards right side motors
+#define dir1PinR  2    //Motor direction Forward right side motors
+#define dir2PinR  4   //Motor direction Backwards right side motors
 #define speedPinR 5    // Needs to be a PWM pin to be able to control motor speed
 #define speedMotor 200  // sets the "speed" of the motor, from 0, completeley still, to 255, max outtage
 
@@ -217,7 +217,7 @@ void goForward(void){                   // move  forward(all motors rotate in fo
   /*Me.x += 1*sin(angle);                 // updates the position of the Rover in the space
   Me.y += 1*cos(angle);*/
 }
-void goLeft(void){                  //turn left (right side motors rotate in forward direction, left  side motors rotate in reverse)
+void goRight(void){                  //turn left (right side motors rotate in forward direction, left  side motors rotate in reverse)
   digitalWrite(dir1PinL,HIGH);
   digitalWrite(dir2PinL,LOW);
   digitalWrite(dir1PinR,LOW);
@@ -228,7 +228,7 @@ void goLeft(void){                  //turn left (right side motors rotate in for
     angle = 0;
   }*/
 }
-void goRight(void){                 //turn right (left side motors rotate in forward direction,  right side motors rotate in reverse)
+void goLeft(void){                 //turn right (left side motors rotate in forward direction,  right side motors rotate in reverse)
   digitalWrite(dir1PinL,LOW);
   digitalWrite(dir2PinL,HIGH);
   digitalWrite(dir1PinR,HIGH);
